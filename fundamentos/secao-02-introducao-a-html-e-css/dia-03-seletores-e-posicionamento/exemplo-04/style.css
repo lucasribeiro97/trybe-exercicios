@@ -1,0 +1,53 @@
+div:hover {
+    border: 10px solid black;
+}
+
+#prim {
+    background-color: red;
+    font-style: italic;
+}
+
+#sec {
+    background-color: green;
+}
+
+#ter {
+    background-color: purple;
+    height: 100px;
+    font-style: italic;
+
+}
+
+#escura {
+    background-color: gray;
+}
+
+#clara {
+    background-color: lightblue;
+}
+
+#prim > h3 {
+    color: white;
+    font-size: large;
+    font-family: monospace;
+}
+
+#sec > h3 {
+    color: white;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ter > h3 {
+    color: aqua;
+}
+
+#escura > h3 {
+    color: aquamarine;
+}
+
+#clara > h3 {
+    color: black;
+    font-style: italic;
+}
+
