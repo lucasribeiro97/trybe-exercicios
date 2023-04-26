@@ -1,0 +1,58 @@
+h1, h2, h3 {
+    color: red;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+
+ol {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+#impar {
+    text-transform: uppercase;
+}
+
+#par {
+    color: green;
+}
+
+li {
+    font-size: 20px;
+}
+
+.azul {
+    color: blue;
+}
+
+#rosa {
+    background-color: pink;
+}
+
+a:hover {
+    font-weight: bold
+}
+
+.aliados a:hover {
+    font-weight: bolder;
+}
+
+#laranja a:hover {
+    color: orange;
+}
+
+#verde a:hover {
+    color: green;
+}
+
+#preto a:hover {
+    color: black;
+}
+
+#amarelo a:hover {
+    color: yellow;
+}
