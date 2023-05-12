@@ -88,6 +88,16 @@
         imagem.src = 'https://picsum.photos/200';
         imagem.className = 'small-image';
         sectionLeft.appendChild(imagem);
+
+        const lista = document.createElement('ul');
+        const listaArray = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+        for (let index = 0; index < listaArray.length; index += 1) {
+            const li = document.createElement('li');
+            li.innerText = listaArray[index];
+            lista.appendChild(li);
+        }
+        sectionRight.appendChild(lista);
     </script>
 </body>
 
