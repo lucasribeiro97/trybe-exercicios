@@ -62,5 +62,37 @@ const books = [
 ];
 
 const authorBornIn1947 = () => {
-  return books.find((book) => book.author.birthYear === 1947).author.name
+  return books.find((book) => book.author.birthYear === 1947).author.name;
+}
+
+const smallerName = () => {
+  let nameBook;
+
+  books.forEach((book) => {
+    if (!nameBook || book.name.length < nameBook.length) {
+      nameBook = book.name;
+    }
+  })
+  return nameBook;
+}
+
+const getNameBook = () => {
+  return books.find((book) => book.name.length === 26);
+}
+
+const everyoneWasBornOnSecXX = () => {
+  return books.every((book) => (
+    book.author.birthYear >= 1901 && book.author.birthYear <= 2000
+  ))
+}
+
+const someBookWasReleaseOnThe80s = () => {
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
+}
+
+const authorUnique = () => {
+  return books.every((book) =>
+    !books.some((bookSome) =>
+      (bookSome.author.birthYear === book.author.birthYear)
+      && (bookSome.author.name !== book.author.name)));
 }
