@@ -10,8 +10,4 @@ sum(primeNumbers[0], primeNumbers[2]) // 54
 
 const [firstNumber, secondNumber, thirdNumber] = primeNumbers;
 
-const soma = (a, b) => {
-  console.log(a + b);
-}
-
 sum(firstNumber, thirdNumber);
