@@ -1,14 +1,24 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import './home.css';
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <h1>Coffeteria</h1>
-      <Link to="/coffes">
-        <button>Conheça nossos produtos</button>
-      </Link>
-    </>
-  )
+    <div className="home-page">
+      <div className="home-title">
+        <h1>Coffeeteria</h1>
+        <h2>Com o passar dos cafés, os anos ficam melhores</h2>
+      </div>
+      <hr />
+      <main>
+        <p>Cafés especiais, nacionais e importados.</p>
+        <button onClick={() => navigate('/coffees')}>
+          Conheça nossos produtos
+        </button>
+      </main>
+    </div>
+  );
 }
 
 export default Home;
