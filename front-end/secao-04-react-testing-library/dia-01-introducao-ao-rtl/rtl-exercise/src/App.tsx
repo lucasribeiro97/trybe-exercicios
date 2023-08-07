@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import ValidEmail from './components/ValidEmail';
 import './App.css';
 
 function App() {
   const [email, setEmail] = useState('');
-  const [saveEmail, setSaveEmail] = useState('');
+  const [title, setTitle] = useState('');
 
-  const handleSendEmail = () => {
-    setSaveEmail(email);
+  const handleClick = () => {
+    setTitle(email);
     setEmail('');
   };
 
@@ -27,16 +28,15 @@ function App() {
           type="button"
           data-testid="id-send"
           value="Enviar"
-          onClick={ handleSendEmail }
+          onClick={ handleClick }
         />
         <input
           id="btn-back"
           type="button"
           value="Voltar"
-          onClick={ () => setSaveEmail('') }
         />
+        <ValidEmail email={ title }/>
       </div>
-      <h2>{ `Valor: ${saveEmail}` }</h2>
     </div>
   );
 }
