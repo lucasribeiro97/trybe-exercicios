@@ -14,6 +14,10 @@ app.get('/books/:id', BookController.getById);
 
 app.post('/books', BookController.create);
 
+app.put('/books/:id', BookController.update);
+
+app.delete('/books/:id', BookController.deleteBook);
+
 app.use((err, req, res, _next) => {
   console.error(err.stack);
   res.send(500).send('Something broke!');

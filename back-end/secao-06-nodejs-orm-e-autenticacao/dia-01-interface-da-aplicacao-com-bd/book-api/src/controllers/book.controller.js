@@ -22,11 +22,30 @@ const create = async (req, res) => {
 
   const newBook = await BookService.create(title, author, pageQuantity);
 
-  return res.status(200).json(newBook);
+  return res.status(201).json(newBook);
+};
+
+const update = async (req, res) => {
+  const { id } = req.params;
+  const { title, author, pageQuantity } = req.body;
+
+  const updatedBook = await BookService.update(id, title, author, pageQuantity);
+
+  return res.status(200).json(updatedBook);
+};
+
+const deleteBook = async (req, res) => {
+  const { id } = req.params;
+
+  const deletedBook = await BookService.deleteBook(id);
+
+  return res.status(200).json(deletedBook);
 };
 
 module.exports = {
   getAll,
   getById,
   create,
+  update,
+  deleteBook,
 };
